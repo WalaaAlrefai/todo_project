@@ -13,7 +13,7 @@ userAnswer=confirm("confirm if you want to skip the welcoming message.");
 if(userAnswer===false){
     var title;
     if (userGender =="male"){
-        alert("welcome Mr")+userName
+        alert("welcome Mr "+userName)
     }
     else if (userGender =="female") {
         alert("welcome Ms "+userName)
