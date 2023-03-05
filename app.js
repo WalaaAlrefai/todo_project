@@ -8,7 +8,7 @@ while (userAge<=0){
     prompt("add your age");
     break;
 } 
-var userAnser;
+var userAnswer;
 userAnswer=confirm("confirm if you want to skip the welcoming message.");
 if(userAnswer===false){
     var title;
@@ -23,4 +23,22 @@ if(userAnswer===false){
     }
 
 }
+var allAnswerArr=[];
+var isWork=prompt("do you have a jop?");
+var isMarried=prompt("Are you Married?");
+var isParent=prompt("Do you have kids?");
+function isEmpty(string){
+    if (string=="yes" || string=="no"){
+       string=string;
+    }else {
+        string="invalid";
+    }
+    return string;
+}
+
+var employeed=isEmpty(isWork);
+var married=isEmpty(isMarried);
+var parent=isEmpty(isParent);
+allAnswerArr=[employeed,married,parent];
+console.log (allAnswerArr);
 
