@@ -25,22 +25,24 @@ if(userAnswer===false){
 }
 const allAnswerArr=[];
 
-
-function traverseArr(arr) {
-var isWork=prompt("do you have a jop?");
-var isMarried=prompt("Are you Married?");
-var isParent=prompt("Do you have kids?");
-arr.push(isWork,isMarried,isParent);
+function askQuestion(question){
+    return prompt(question);
 }
-   
+function answerSaver(arr){
+    var isWork= askQuestion("do you have a jop?");
+    var isMarried=askQuestion("Are you Married?");
+    var isParent=askQuestion("Do you have kids?");
+    arr.push(isWork,isMarried,isParent);
+}
 
 function isEmpty(arr){
-    for(var i=arr[i]; i<arr.length; i++){
+    for(let i=0; i<arr.length; i++){
     if (arr[i]=="yes" || arr[i]=="no"){
        arr[i]=arr[i];
     }else{
         arr[i]="invalid";
     }
+   
 }
 }
 function printArr(arr){
@@ -49,7 +51,7 @@ function printArr(arr){
     }
 }
 
-traverseArr(allAnswerArr);
+answerSaver(allAnswerArr);
 isEmpty(allAnswerArr);
 printArr(allAnswerArr);
 
