@@ -23,22 +23,34 @@ if(userAnswer===false){
     }
 
 }
-var allAnswerArr=[];
+const allAnswerArr=[];
+
+
+function traverseArr(arr) {
 var isWork=prompt("do you have a jop?");
 var isMarried=prompt("Are you Married?");
 var isParent=prompt("Do you have kids?");
-function isEmpty(string){
-    if (string=="yes" || string=="no"){
-       string=string;
-    }else {
-        string="invalid";
+arr.push(isWork,isMarried,isParent);
+}
+   
+
+function isEmpty(arr){
+    for(var i=arr[i]; i<arr.length; i++){
+    if (arr[i]=="yes" || arr[i]=="no"){
+       arr[i]=arr[i];
+    }else{
+        arr[i]="invalid";
     }
-    return string;
+}
+}
+function printArr(arr){
+    for(let i=0;i<arr.length;i++){
+      console.log(arr[i]);
+    }
 }
 
-var employeed=isEmpty(isWork);
-var married=isEmpty(isMarried);
-var parent=isEmpty(isParent);
-allAnswerArr=[employeed,married,parent];
-console.log (allAnswerArr);
+traverseArr(allAnswerArr);
+isEmpty(allAnswerArr);
+printArr(allAnswerArr);
+
 
