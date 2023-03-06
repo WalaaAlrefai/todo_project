@@ -8,7 +8,7 @@ while (userAge<=0){
     prompt("add your age");
     break;
 } 
-var userAnser;
+var userAnswer;
 userAnswer=confirm("confirm if you want to skip the welcoming message.");
 if(userAnswer===false){
     var title;
@@ -23,4 +23,36 @@ if(userAnswer===false){
     }
 
 }
+const allAnswerArr=[];
+
+function askQuestion(question){
+    return prompt(question);
+}
+function answerSaver(arr){
+    var isWork= askQuestion("do you have a jop?");
+    var isMarried=askQuestion("Are you Married?");
+    var isParent=askQuestion("Do you have kids?");
+    arr.push(isWork,isMarried,isParent);
+}
+
+function isEmpty(arr){
+    for(let i=0; i<arr.length; i++){
+    if (arr[i]=="yes" || arr[i]=="no"){
+       arr[i]=arr[i];
+    }else{
+        arr[i]="invalid";
+    }
+   
+}
+}
+function printArr(arr){
+    for(let i=0;i<arr.length;i++){
+      console.log(arr[i]);
+    }
+}
+
+answerSaver(allAnswerArr);
+isEmpty(allAnswerArr);
+printArr(allAnswerArr);
+
 
